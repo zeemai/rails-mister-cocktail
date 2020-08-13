@@ -1,8 +1,19 @@
-<h1>Cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/16/15/8f/16158f24fc89086a9232df1f3d5eb8ef.jpg);">
+  <div class="container">
+    <h1><strong>Cocktail Party</strong></h1>
+    <br />
+    <%= link_to 'Create a new 🍸', new_cocktail_path , class: "btn-blue" %>
+  </div>
+</div>
+
+
 
 <ul>
     <% @cocktails.each do |cocktail| %>
-        <li><%=cocktail.name%>  <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%></li>
-        <br>
+      <%= link_to cocktail_path(cocktail) do %>
+        <li><%=cocktail.name%></li>
+      <% end %>
     <% end %>
 </ul>
+
+
