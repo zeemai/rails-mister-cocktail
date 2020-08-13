@@ -7,13 +7,12 @@
 </div>
 
 
-
-<ul>
-    <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail) do %>
-        <li><%=cocktail.name%></li>
-      <% end %>
+<% @cocktails.each do |cocktail| %>
+  <div class="card-category m-2"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(https://www.bascofinefoods.com/spanish-recipes-wpfiles/wp-content/uploads/2015/04/espresso_martini_recipe-e1505647014593.jpg)">
+    <%= link_to cocktail_path(cocktail) do %>
+      <%=cocktail.name%>
     <% end %>
-</ul>
-
-
+  </div>
+<% end %>
