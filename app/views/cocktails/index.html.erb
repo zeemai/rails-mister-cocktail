@@ -1,6 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
   <div class="container">
-    <h1><strong>Cocktail Party</strong></h1>
+    <h1>
+      <span id="banner-typed-text"></span>
+    </h1>
     <br />
     <%= link_to 'Create a new 🍸', new_cocktail_path , class: "btn-blue" %>
   </div>
@@ -20,4 +22,8 @@
     <% end %>
   </div>
 <% end %>
+
+<button id="back-to-top" type="button">
+  Go to Top
+</button>
 
